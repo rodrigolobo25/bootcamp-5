@@ -1,0 +1,16 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\client",
+    "\\client\\js",
+    "\\client\\js\\controllers",
+    "\\client\\js\\factories",
+    "\\server",
+    "\\server\\config",
+    "\\server\\controllers",
+    "\\server\\models",
+    "\\server\\routes"
+  ],
+  "SelectedNode": "\\server\\models\\listings.server.model.js",
+  "PreviewInSolutionExplorer": false
+}
