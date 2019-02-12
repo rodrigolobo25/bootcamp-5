@@ -27,7 +27,7 @@ angular.module('listings').controller('ListingsController', ['$scope', 'Listings
         };
 
         $scope.showDetails = function (index) {
-            $scope.info = $scope.listings[index];
+            $scope.info = index;
         };
     }
 ]);
