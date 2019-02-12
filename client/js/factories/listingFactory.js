@@ -12,7 +12,7 @@ angular.module('listings', []).factory('Listings', function($http) {
 	   /**TODO
         return result of HTTP delete method
        */
-        return $http.delete('https://afternoon-brushlands-68906.herokuapp.com/api/listings', listing);
+        return $http.delete('https://afternoon-brushlands-68906.herokuapp.com/api/listings/' + id);
     }
   };
 
