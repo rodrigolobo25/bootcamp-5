@@ -15,7 +15,7 @@ angular.module('listings').controller('ListingsController', ['$scope', 'Listings
             $scope.newListing = {};
         }
         $scope.deleteListing = function (index) {
-            //var indexd = $scope.listings.indexOf(index);
+            var indexd = $scope.listings.indexOf(index);
             Listings.delete(indexd).then(function (response) {
             }, function (error) {
                 console.log('Unable to delete listings:', error);
