@@ -10,15 +10,16 @@ angular.module('listings').controller('ListingsController', ['$scope', 'Listings
         $scope.detailedInfo = undefined;
 
         $scope.addListing = function () {
-            $scope.listings.push({ "code": $scope.code, "name": $scope.name, "coordinates": { "latitude": $scope.latitude, "longitude": $scope.longitude }, "address": $scope.address });
-            $scope.code = "";
-            $scope.name = "";
-            $scope.longitude = "";
-            $scope.latitude = "";
-            $scope.address = "";
+            $scope.listings.push($scope.newListing);
+            Listings.create($scope.newListing);
+            $scope.newListing = {};
         }
         $scope.deleteListing = function (index) {
-            var indexd = $scope.listings.indexOf(index);
+            //var indexd = $scope.listings.indexOf(index);
+            Listings.delete(indexd).then(function (response) {
+            }, function (error) {
+                console.log('Unable to delete listings:', error);
+            });
             $scope.listings.splice(indexd, 1);
         };
         $scope.showDetails = function (index) {

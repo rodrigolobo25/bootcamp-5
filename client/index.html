@@ -55,11 +55,11 @@
 
 
 
-                    <input type="text" class="form-control" placeholder="Code" ng-model="code">
-                    <input type="text" class="form-control" placeholder="Building Name" ng-model="name">
-                    <input type="text" class="form-control" placeholder="Latitude" ng-model="latitude">
-                    <input type="text" class="form-control" placeholder="Longitude" ng-model="longitude">
-                    <input type="text" class="form-control" placeholder="Address" ng-model="address">
+                    <input type="text" class="form-control" placeholder="Code" ng-model="newListing.code">
+                    <input type="text" class="form-control" placeholder="Building Name" ng-model="newListing.name">
+                    <input type="text" class="form-control" placeholder="Latitude" ng-model="newListing.coordinates.latitude">
+                    <input type="text" class="form-control" placeholder="Longitude" ng-model="newListing.coordinates.longitude">
+                    <input type="text" class="form-control" placeholder="Address" ng-model="newListing.address">
                     <button type="button" class="btn btn-primary" ng-click="addListing()">Add Item</button>
 
                 </div>
