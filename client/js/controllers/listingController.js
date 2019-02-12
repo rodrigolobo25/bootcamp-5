@@ -17,12 +17,13 @@ angular.module('listings').controller('ListingsController', ['$scope', 'Listings
         };
 
         $scope.deleteListing = function (index) {
-            var indexOf = $scope.listings.indexOf(index);
-            Listings.delete(index).then(function (response) {
+
+            var indexd = $scope.listings.indexOf(index);
+            $scope.listings.splice(indexd, 1);
+            Listings.delete(indexd).then(function (response) {
             }, function (error) {
-                console.log('Could not delete:', error);
+                console.log('Unable to delete listings:', error);
             });
-            $scope.listings.splice(indexOf, 1);
         };
 
         $scope.showDetails = function (index) {
