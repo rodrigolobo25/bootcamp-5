@@ -20,7 +20,7 @@ angular.module('listings').controller('ListingsController', ['$scope', 'Listings
 
             var indexd = $scope.listings.indexOf(index);
             $scope.listings.splice(indexd, 1);
-            Listings.delete(index).then(function (response) {
+            Listings.delete(indexd).then(function (response) {
             }, function (error) {
                 console.log('Unable to delete listings:', error);
             });
