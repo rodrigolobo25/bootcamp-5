@@ -53,7 +53,7 @@ exports.update = function(req, res) {
     listing.name = req.body.name;
     listing.code = req.body.code;
     listing.address = req.body.address;
-  /* Save the article */
+  
 
     /* Save the article */
     listing.save(function (err) {
@@ -74,7 +74,7 @@ exports.delete = function(req, res) {
         if (err) {
             res.status(400).send(err);
         } else {
-            res.json(listing);
+            res.json(req.listing);
         }
     });
 };
