@@ -70,7 +70,9 @@ exports.update = function(req, res) {
 exports.delete = function(req, res) {
     /** TODO **/
   /* Remove the article */
-    Listing.findOneAndDelete({'code': req.code},function (err, listing) {
+    var elemento = req.indexd;
+    var code = elemento.code;
+    Listing.findOneAndDelete({'code': code},function (err, listing) {
         if (err) {
             res.status(400).send(err);
         } else {
