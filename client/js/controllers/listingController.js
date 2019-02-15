@@ -19,11 +19,19 @@ angular.module('listings').controller('ListingsController', ['$scope', 'Listings
         $scope.deleteListing = function (index) {
 
            // var indexd = $scope.listings.indexOf(index);
-            $scope.listings.splice(index, 1);
-            Listings.delete(index).then(function (response) {
-            }, function (error) {
-                console.log('Unable to delete listings:', error);
-            });
+            var stop = false;
+            for (var i = 0; i < $scope.listings.length && stop == false; i++) {
+                var elem = $scope.listings[i];
+
+                if (elem.code == index.code) {
+                    $scope.listings.splice(index, 1);
+                    Listings.delete(index).then(function (response) {
+                    }, function (error) {
+                        console.log('Unable to delete listings:', error);
+                        });
+                    stop = true;
+                }
+            }
         };
 
         $scope.showDetails = function (index) {
