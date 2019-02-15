@@ -70,11 +70,11 @@ exports.update = function(req, res) {
 exports.delete = function(req, res) {
     /** TODO **/
   /* Remove the article */
-    Listing.remove(function (err) {
+    Listing.findOneAndDelete({'code': req.code},function (err, listing) {
         if (err) {
             res.status(400).send(err);
         } else {
-            res.json(req.listing);
+            res.json(listing);
         }
     });
 };
