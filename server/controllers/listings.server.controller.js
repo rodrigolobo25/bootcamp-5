@@ -46,7 +46,7 @@ exports.read = function(req, res) {
 
 /* Update a listing */
 exports.update = function(req, res) {
-  var listing = req.listing;
+  var listing = req.Listing;
 
   /** TODO **/
   /* Replace the article's properties with the new properties found in req.body */
@@ -68,7 +68,7 @@ exports.update = function(req, res) {
 
 /* Delete a listing */
 exports.delete = function(req, res) {
-  var listing = req.listing;
+  var listing = req.Listing;
 
   /** TODO **/
   /* Remove the article */

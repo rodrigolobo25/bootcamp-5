@@ -11,6 +11,6 @@
     "\\server\\models",
     "\\server\\routes"
   ],
-  "SelectedNode": "\\server\\models\\listings.server.model.js",
+  "SelectedNode": "\\client\\js\\factories\\listingFactory.js",
   "PreviewInSolutionExplorer": false
 }
